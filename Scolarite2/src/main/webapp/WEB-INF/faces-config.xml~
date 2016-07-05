@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <application>
+        <el-resolver>
+            org.springframework.web.jsf.el.SpringBeanFacesELResolver
+        </el-resolver>
+    </application>
+     <navigation-rule>
+        <from-view-id>/*</from-view-id>
+        <navigation-case>
+            <from-outcome>index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect>/templateindex.xhtml</redirect>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>eleves</from-outcome>
+            <to-view-id>/templateAdministrateur/eleves.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>enseignants</from-outcome>
+            <to-view-id>/templateAdministrateur/enseignants.xhtml</to-view-id>
+        </navigation-case>
+         <navigation-case>
+            <from-outcome>fonction</from-outcome>
+            <to-view-id>/templateAdministrateur/telechargements.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>connexion</from-outcome>
+            <to-view-id>/templateAdministrateur/connection.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>listevente</from-outcome>
+            <to-view-id>/templateAdministrateur/listevente.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>listvente</from-outcome>
+            <to-view-id>/templateAdministrateur/listenvente.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>statistique</from-outcome>
+            <to-view-id>/templateAdministrateur/statistique.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>
